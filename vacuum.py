@@ -217,6 +217,12 @@ class MiroboVacuum2(StateVacuumEntity):
       return self.vacuum_state['battary_life']
 
   @property
+  def repeat_state(self):
+    """Return the repeat state of the vacuum cleaner."""
+    if self.vacuum_state is not None:
+      return self.vacuum_state['repeat_state']
+
+  @property
   def fan_speed(self):
     """Return the fan speed of the vacuum cleaner."""
     if self.vacuum_state is not None:
